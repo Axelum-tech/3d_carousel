@@ -1,0 +1,139 @@
+body{
+    background-color: #333;
+}
+.abs-center{
+    position: absolute; /*centru absolut */ 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    margin:auto;
+
+}
+
+.carousel{
+    /* background-color: #555; */
+    width: 700px;
+    height:700px;
+    
+    perspective: 600px
+}
+.carousel .slide{
+    /* background-color: #777; */
+    width: 600px;
+    height:600px;
+
+    transform: rotateX(35deg) ;
+    perspective: 900px;
+   
+    
+    
+}
+
+.carousel .slide div{
+    background-color: #131;
+    width: 400px;
+    height: 600px;
+    border:solid 1px black;
+    transform-origin: center center -115.5px;
+
+    
+     /* opacity: 0.5;  */
+
+    
+
+}
+
+
+.carousel .slide div:nth-child(1){
+    transform:  rotateX(320deg) rotateY(0deg)scaleY(1.1)  ;
+     z-index: 1; 
+     animation: rot1 10s infinite linear;
+     
+   
+}
+
+.carousel .slide div:nth-child(2){
+    transform:  rotateX(320deg) rotateY(120deg) scaleY(1.1) ; 
+    z-index: 0; 
+
+     animation: rot2 10s infinite linear; 
+    
+  
+    
+}
+.carousel .slide div:nth-child(3){
+    transform:  rotateX(320deg) rotateY(240deg) scaleY(1.1) ;
+   
+    /* z-index: 0; */
+
+    animation: rot3 10s infinite linear;
+   
+ } 
+
+ img {
+    -webkit-box-reflect: below 10px linear-gradient(to bottom, transparent, white);
+}
+
+.button{
+    position:absolute;
+    top: 25%;
+    right: 49.5%;}
+   
+
+ @keyframes rot1{
+     0%{
+        transform:  rotateX(320deg) rotateY(0deg)scaleY(1.1)  ;
+        z-index: 1;
+     }
+     45% {transform:  rotateX(320deg) rotateY(162deg)scaleY(1.1)  ;
+        z-index: 0;
+     }
+      95%{transform:  rotateX(320deg) rotateY(342deg)scaleY(1.1)  ;
+        z-index: 1;} 
+     
+    100%{transform: rotateX(320deg) rotateY(360deg)scaleY(1.1);
+        z-index: 1;
+    }
+    }
+
+    @keyframes rot2{
+        0%{
+            transform:  rotateX(320deg) rotateY(120deg) scaleY(1.1) ; 
+            z-index: 0;
+         }
+        
+        87%{ transform:  rotateX(320deg) rotateY(433.2deg) scaleY(1.1) ; 
+            z-index: 1;
+
+         }
+         92%{ transform:  rotateX(320deg) rotateY(451.2deg) scaleY(1.1) ; 
+            z-index: 0;
+
+         }
+       
+        100%{ 
+            transform:  rotateX(320deg) rotateY(480deg) scaleY(1.1) ;
+            z-index: 0
+           
+        }
+
+    }
+
+    @keyframes rot3{
+        0%{
+            transform:  rotateX(320deg) rotateY(239deg) scaleY(1.1) ; 
+        
+        }
+        
+
+
+
+        100%{ transform:  rotateX(320deg) rotateY(600deg) scaleY(1.1) ;
+            
+        }
+
+    }
+
+
+
